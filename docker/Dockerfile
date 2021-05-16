@@ -7,5 +7,3 @@ COPY . .
 RUN yarn install
 
 RUN npx hardhat compile
-
-CMD node src/server.js 900 
