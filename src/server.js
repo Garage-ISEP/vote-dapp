@@ -3,12 +3,12 @@ const app = express()
 const port = 3000
 const Web3 = require("web3")
 const utils = require("./utils.js")
-const chainInfo = require("./chain_info.json")
+const chainInfo = require("../data/chain_info.json")
 const ballotJSON = require("../artifacts/contracts/BallotGarageISEP.sol/BallotGarageISEP.json")
 const generator = require("./generate_secrets_from_mails")
 const fs = require("fs")
 const mailer = require("./send_emails.js")
-const data = fs.readFileSync('../mailsEtPonderation.csv', 'utf8')
+const data = fs.readFileSync('../data/mailsEtPonderation.csv', 'utf8')
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 generator.generateSecrets(data)
