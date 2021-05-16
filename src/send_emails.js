@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const mailConfig = require("./mailConfig.json")
+const mailConfig = require("../data/mailConfig.json")
 
 async function sendMails(subject, candidateNames, userInfos){
     let mailOptions
